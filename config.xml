@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.ionicframework.bcrunner2797686" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Runner 2.0</name>
+  <description>
+        A therapy management app that works hard so that you don't have to.
+    </description>
+  <author email="brian.hiatt41@gmail.com" href="http://portfolio.bchiatt.co/">
+       Brian Hiatt
+    </author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="splashscreen" value="screen"/>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+</widget>
