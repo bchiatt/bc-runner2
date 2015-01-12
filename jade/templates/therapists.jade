@@ -1,0 +1,11 @@
+html
+  body
+    ion-view(title='Therapists')
+      ion-nav-buttons(side='left')
+        button.button.button-icon.icon.ion-navicon(menu-toggle='left')
+      ion-content
+        ion-list
+          a.item.item-thumbnail-left(ng-repeat='t in therapists', href='#/app/therapists/{{t.id}}')
+            img(src='{{t.photo}}')
+            h2 {{t.first}} {{t.last}}
+            p {{t.email || 'no email on file'}}

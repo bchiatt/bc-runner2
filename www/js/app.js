@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('bc-runner2', ['ionic', 'starter.controllers'])
+  angular.module('bc-runner2', ['ionic'])
 
   .run(function($ionicPlatform){
     $ionicPlatform.ready(function(){
@@ -14,53 +14,74 @@
     });
   })
 
-  .config(function($stateProvider, $urlRouterProvider){
+  .config(function($stateProvider, $urlRouterProvider, $httpProvider){
+    $httpProvider.defaults.withCredentials = true;
+
     $stateProvider
 
     .state('app', {
       url: '/app',
       abstract: true,
       templateUrl: 'templates/menu.html',
-      controller: 'AppCtrl'
+      controller: 'AccountCtrl'
     })
 
-    .state('app.search', {
-      url: '/search',
+    .state('app.home', {
+      url: '/home',
       views: {
         'menuContent': {
-          templateUrl: 'templates/search.html'
+          templateUrl: 'templates/home.html'
         }
       }
     })
 
-    .state('app.browse', {
-      url: '/browse',
+    .state('app.clients', {
+      url: '/clients',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/clients.html',
+          controller: 'ClientsCtrl'
         }
       }
     })
 
-    .state('app.playlists', {
-      url: '/playlists',
+    .state('app.client', {
+      url: '/clients/{clientId}',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+          templateUrl: 'templates/client.html',
+          controller: 'ClientCtrl'
         }
       }
     })
 
-    .state('app.single', {
-      url: '/playlists/:playlistId',
+    .state('app.therapists', {
+      url: '/therapists',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlist.html',
-          controller: 'PlaylistCtrl'
+          templateUrl: 'templates/therapists.html',
+          controller: 'TherapistsCtrl'
+        }
+      }
+    })
+
+    .state('app.therapist', {
+      url: '/therapists/{therapistId}',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/therapist.html',
+          controller: 'TherapistCtrl'
         }
       }
     });
-    $urlRouterProvider.otherwise('/app/playlists');
-  });
+    $urlRouterProvider.otherwise('/app/home');
+  })
+  // #todo only used during development; remove for production
+  .run(['$rootScope', '$http', 'origin', function($rootScope, $http, origin){
+    $http.get(origin + '/status').then(function(response){
+      $rootScope.rootuser = response.data;
+    }, function(){
+      $rootScope.rootuser = null;
+    });
+  }]);
 })();

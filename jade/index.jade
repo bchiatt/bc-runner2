@@ -3,11 +3,21 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width')
-    title
+    title RUG Runner2
     link(href='css/ionic.app.css', rel='stylesheet')
     script(src='lib/ionic/js/ionic.bundle.js')
     script(src='cordova.js')
     script(src='js/app.js')
-    script(src='js/controllers.js')
+    script(src='js/values/config.js')
+    script(src='js/controllers/clients.js')
+    script(src='js/controllers/client.js')
+    script(src='js/controllers/therapists.js')
+    script(src='js/controllers/therapist.js')
+    script(src='js/controllers/account.js')
+    script(src='js/models/user.js')
+    script(src='js/models/client.js')
+    script(src='js/models/therapist.js')
+    script(src='js/models/time.js')
+    script(src='lib/moment/min/moment.min.js')
   body(ng-app='bc-runner2')
     ion-nav-view

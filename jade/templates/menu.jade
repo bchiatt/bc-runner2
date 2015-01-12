@@ -9,14 +9,15 @@ html
         ion-nav-view(name='menuContent', animation='slide-left-right')
       ion-side-menu(side='left')
         header.bar.bar-header.bar-stable
-          h1.title Left
-        ion-content
-          ion-list
+          h1.title Runner 2.0
+        ion-content.has-header
+          ion-list(ng-show='!rootuser')
             ion-item(nav-clear='', menu-close='', ng-click='login()')
               | Login
-            ion-item(nav-clear='', menu-close='', href='#/app/search')
-              | Search
-            ion-item(nav-clear='', menu-close='', href='#/app/browse')
-              | Browse
-            ion-item(nav-clear='', menu-close='', href='#/app/playlists')
-              | Playlists
+          ion-list(ng-show='rootuser')
+            ion-item(nav-clear='', menu-close='', href='#/app/clients')
+              | Clients
+            ion-item(nav-clear='', menu-close='', href='#/app/therapists')
+              | Therapists
+            ion-item(nav-clear='', menu-close='', ng-click='doLogout()')
+              | Logout

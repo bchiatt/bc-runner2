@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ion-view title="Client">
+      <ion-content has-header="true" padding="true">
+        <button ng-click="snap()" class="button button-calm">Take A Photo</button>
+        <button ng-click="choose()" class="button button-energized">Pick A Photo</button>
+        <div class="list card">
+          <div class="item item-avatar"><img src="{{client.photo}}">
+            <h2>{{client.first}} {{client.last}}</h2>
+          </div>
+          <div class="item item-img"><img src="{{client.photo}}" class="profile-photo"></div>
+          <div class="item item-body">
+            <p>Email: {{client.email || 'not set'}}</p>
+            <p>Phone: {{client.phone || 'not set'}}</p>
+            <p>Room: {{client.room}}</p>
+            <p>Admit Date: {{dateMoDaYr(client.admit_date)}}</p>
+            <p>Discharge Date: {{dateMoDaYr(client.discharge_date)}}</p>
+          </div>
+        </div>
+      </ion-content>
+    </ion-view>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+html
+  body
+    ion-view(title='Clients')
+      ion-nav-buttons(side='left')
+        button.button.button-icon.icon.ion-navicon(menu-toggle='left')
+      ion-content
+        ion-list
+          a.item.item-thumbnail-left(ng-repeat='c in clients', href='#/app/clients/{{c.id}}')
+            img(src='{{c.photo}}')
+            h2 {{c.first}} {{c.last}}
+            p {{c.email || 'no email on file'}}
+                

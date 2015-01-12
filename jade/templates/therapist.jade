@@ -1,0 +1,17 @@
+html
+  body
+    ion-view(title='Therapist')
+      ion-content(has-header='true', padding='true')
+        button.button.button-calm(ng-click='snap()') Take A Photo
+        button.button.button-energized(ng-click='choose()') Pick A Photo
+        .list.card
+          .item.item-avatar
+            img(src='{{therapist.photo}}')
+            h2 {{therapist.first}} {{therapist.last}}
+          .item.item-img
+            img.profile-photo(src='{{therapist.photo}}')
+          .item.item-body
+            p Email: {{therapist.email}}
+            p Phone: {{therapist.phone}}
+            p Therapist: {{therapist.is_therapist}}
+            p Productivity: {{therapist.productivity_goal}}%

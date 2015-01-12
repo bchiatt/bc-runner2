@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ion-view title="Therapist">
+      <ion-content has-header="true" padding="true">
+        <button ng-click="snap()" class="button button-calm">Take A Photo</button>
+        <button ng-click="choose()" class="button button-energized">Pick A Photo</button>
+        <div class="list card">
+          <div class="item item-avatar"><img src="{{therapist.photo}}">
+            <h2>{{therapist.first}} {{therapist.last}}</h2>
+          </div>
+          <div class="item item-img"><img src="{{therapist.photo}}" class="profile-photo"></div>
+          <div class="item item-body">
+            <p>Email: {{therapist.email}}</p>
+            <p>Phone: {{therapist.phone}}</p>
+            <p>Therapist: {{therapist.is_therapist}}</p>
+            <p>Productivity: {{therapist.productivity_goal}}%</p>
+          </div>
+        </div>
+      </ion-content>
+    </ion-view>
+  </body>
+</html>
