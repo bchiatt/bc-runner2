@@ -1,48 +1,31 @@
 bc-runner2
 ==========
-## name of project
-### Code Badges
-build status icon
-coverage status icon
-
-### Screenshots
-![Image1](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/one.jpg)
-![Image2](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/two.jpg)
-
 ### Description
-write a description about your project
+This is a mobile companion to [Runner 2.0](https://github.com/bchiatt/runner2)
+therapy management application. This app allows you to see your clients and
+therapists as well as upload profile photos from your phone.
 
 ### Models
 ```
-Model 1
+Client
 ```
 
 ```
-Model 2
+Therapist
 ```
 
-### Database
-```
-Collecion 1
-```
-
-```
-Collection 2
-```
 
 ### Features
-- [x] Feature 1
-- [ ] Feature 2
-- [x] Feature 3
+- [x] Login
+- [x] Logout
+- [x] List All Clients
+- [x] List All Therapists
+- [x] Upload Photo for a Client
+- [x] Upload Photo for a Therapist
 
-### Running Tests
-```bash
-$ npm install
-$ npm test
-```
 
 ### Contributors
-- [Chyld Medford](https://github.com/chyld)
+- [Brian Hiatt]](https://github.com/bchiatt)
 
 ### License
 [MIT](LICENSE)
