@@ -25,7 +25,7 @@ Therapist
 
 
 ### Contributors
-- [Brian Hiatt]](https://github.com/bchiatt)
+- [Brian Hiatt](https://github.com/bchiatt)
 
 ### License
 [MIT](LICENSE)
